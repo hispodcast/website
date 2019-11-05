@@ -11,6 +11,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script type="text/javascript">
+			var onloadCallback = function() {
+			  grecaptcha.render('html_element', {
+				'sitekey' : '6LcSPMEUAAAAAIPV_9ORh2b5149M2LHDSUWXDB3x'
+			  });
+			};
+		  </script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	</head>
 	<body class="is-preload">
@@ -114,6 +121,11 @@
 											<div class="col-12">
 												<textarea name="message" placeholder="Message" rows="6"></textarea>
 											</div>
+											<form action="?" method="POST">
+													<div id="html_element"></div>
+													<br>
+													<input type="submit" value="Submit">
+												  </form>
 											<div class="col-12">
 												<input type="submit" value="Send Message" />
 											</div>
@@ -139,6 +151,9 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+			async defer>
+		</script>
 
 	</body>
 </html>
